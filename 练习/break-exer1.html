@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /**
+         * 2.打印1-100之间所有的质数
+         */
+
+        //测试如下程序的性能
+        //在程序执行前,开启计时器
+        //console.time("计时器的名字");可以用来开启一个计时器
+        //它需要一个字符串作为参数,这个字符串将会作为计时器的标识
+        console.time("test");
+
+        outer:
+            for (var i = 2; i <= 100000; i++) {
+                for (var j = 2; j < Math.sqrt(i); j++) {
+                    if (i % j == 0) {
+                        continue outer;
+                    }
+                }
+                // console.log(i);
+            }
+        //终止计时器
+        //console.timeEnd("计时器的名字");用来停止一个计时器,需要一个计时器的名称作为参数
+        console.timeEnd("test");
+
+        //可以通过Math.sqrt()对一个数进行开方
+        var result = Math.sqrt(16);
+        console.log("result = " + result);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

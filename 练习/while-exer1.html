@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 假如投资年利率为5%,试求1000块增长到5000块,需要花费多少年
+         */
+
+            //定义一个变量,表示当前的钱数
+        var money = 1000;
+        var year = 1;
+
+        while (money < 5000) {
+            money *= 1.05;
+            document.write("money=" + money + "<br/>");
+            document.write("year=" + year + "<br/>");
+            year++;
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
